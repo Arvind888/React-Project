@@ -28,9 +28,11 @@ handleSubmit(e){
           location : this.refs.location.value
         }}, function(){
         //  console.log(this.state)
-          this.props.addBank(this.state.newBank)
+          this.props.addBank(this.state.newBank);
       });
   }
+  // This resets the for after adding the form fields to the state and to the App.js state.
+   e.target.reset();
 }
   render () {
    let options =  this.props.type.map(type =>{
