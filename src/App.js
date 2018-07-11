@@ -39,7 +39,7 @@ handleBank(newBank){
   console.log(newBank);
   let banks = this.state.banks;
   banks.push(newBank);
-  console.log(banks);
+  //console.log(banks);
   this.setState({banks:banks})
 
 }

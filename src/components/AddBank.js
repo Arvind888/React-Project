@@ -20,11 +20,12 @@ handleSubmit(e){
    if( this.refs.title.value === ''){
      alert('Title is required!');
    }else {
-      console.log(this.refs.title.value)
+      // console.log(this.refs.title.value)
       this.setState({
         newBank : {
           name : this.refs.title.value,
-          type :this.refs.type.value
+          type :this.refs.type.value,
+          location : this.refs.location.value
         }}, function(){
         //  console.log(this.state)
           this.props.addBank(this.state.newBank)
@@ -43,7 +44,12 @@ handleSubmit(e){
             <label>Title : </label> <br/>
             <input type="text" ref="title" />
           </div>
-            <br/>
+          <br/>
+          <div>
+            <label>Location: </label> <br/>
+            <input type="text" ref="location"/>
+          </div>
+          <br/>
           <div>
             <label>Category: </label> <br/>
             <select ref="type">
